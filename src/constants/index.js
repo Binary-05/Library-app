@@ -34,30 +34,35 @@ const K = {
         author: "Colleen Hover"
         },
         
-        // { image: temple,
-        // title:"Reminders Of Him",
-        // author: "Colleen Hover"
-        // },
+        {  id: 6,
+            image: temple,
+        title:"Reminders Of Him",
+        author: "Colleen Hover"
+        },
         
-        // { image: temple,
-        // title:"Reminders Of Him",
-        // author: "Colleen Hover"
-        // },
+        {  id: 7,
+            image: temple,
+        title:"Reminders Of Him",
+        author: "Colleen Hover"
+        },
         
-        // { image: temple,
-        // title:"Reminders Of Him",
-        // author: "Colleen Hover"
-        // },
+        {  id: 8,
+            image: temple,
+        title:"Reminders Of Him",
+        author: "Colleen Hover"
+        },
         
-        // { image: temple,
-        // title:"Reminders Of Him",
-        // author: "Colleen Hover"
-        // },
+        {  id: 9,
+            image: temple,
+        title:"Reminders Of Him",
+        author: "Colleen Hover"
+        },
         
-        // { image: temple,
-        // title:"Reminders Of Him",
-        // author: "Colleen Hover"
-        // },
+        { id: 10,
+            image: temple,
+        title:"Reminders Of Him",
+        author: "Colleen Hover"
+        },
         
 
     ]
