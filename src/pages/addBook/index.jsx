@@ -26,30 +26,32 @@ const AddBook = () => {
   };
 
   return (
-    <div className="bg-[#9f440709]">
+    <div className="bg-[url('./assets/images/books-5433432_1280.jpg')] bg-cover">
       <Navbar />
       <div className="mt-20 ">
         <p className="font-bold italic text-3xl text-center ">Read with BookPal</p>
 
         <div className="border border-[#9F4307] shadow-2xl rounded-xl h-5/6 w-2/5 ml-96 pb-10">
 
-          <form onSubmit={handleSubmit} className="flex flex-col text-center place-items-center bg-white">
+          <form action="upload.php" method="post" enctype="multipart/form-data"   onSubmit={handleSubmit} className="flex flex-col text-center place-items-center backdrop-filter backdrop-blur-lg"  >
 
-            <input type="image" src="" alt="" className="border border-[#9F4307] h-36 w-64 rounded-3xl mb-3 mt-2" />
+            <input type="file" name="fileToUpload" id="fileToUpload" className="border border-[#9F4307] h-36 w-64 rounded-3xl mb-3 mt-2" required />
+            <input type="Submit" value="Upload Image" name="Submit" className="text-white"/>
 
-            <label name="title" id="title">Title</label>
+
+            <label name="title" id="title" className="text-white">Title</label>
             <input type="text" required className="border border-[#9F4307] w-64 rounded-3xl mb-3 p-1" />
 
 
-            <label>Author</label>
-            <select name="author" id="authors" className="border border-[#9f4407] w-64 rounded-3xl mb-3 p-1">
+            <label name="Author" id="Author" className="text-white">Author</label>
+            <select name="author" id="authors" className="border border-[#9f4407] w-64 rounded-3xl mb-3 p-1" required>
               <option value="#">-select-</option>
               <option value="#">Coleen Hover</option>
               <option value="#">Gabriel Bellany</option>
             </select>
 
-            <label name="genre" id="genre">Genre</label>
-            <select name="genre" id="genre" className="border border-[#9F4307] w-64 rounded-3xl mb-3 p-1" >
+            <label name="genre" id="genre" className="text-white" >Genre</label>
+            <select name="genre" id="genre" className="border border-[#9F4307] w-64 rounded-3xl mb-3 p-1" required >
               <option value="#">-select-</option>
               <option value="#">Politics</option>
               <option value="#">Poetry</option>
@@ -57,10 +59,13 @@ const AddBook = () => {
               <option value="#">History</option>
             </select>
 
-            <label name="year" id="year">Year</label>
-            <input type="date" className="border border-[#9F4307] w-64 rounded-3xl mb-3 p-1" />
+            <label name="year" id="year" className="text-white">Year</label>
+            <input type="date" className="border border-[#9F4307] w-64 rounded-3xl mb-3 p-1" required/>
 
-            <label name="description" id="description">Description</label>
+            <label name="description" id="description"className="text-white" >Description</label>
+            <input type="text" className="border border-[#9F4307] h-28 w-64 rounded-3xl mb-3 p-1" required />
+
+            <label name="content" id="content" className="text-white">Content</label>
             <input type="text" className="border border-[#9F4307] h-28 w-64 rounded-3xl mb-3 p-1" />
 
 
