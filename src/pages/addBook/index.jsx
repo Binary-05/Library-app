@@ -2,9 +2,20 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import axios from "axios";
 import { BASE_URL } from "../../constants";
+import { useEffect, useState } from "react";
 
 
 const AddBook = () => {
+  const [authors, setAuthors] = useState([]);
+
+  const getAuthors = async () => {
+    const response = await axios.get(`${BASE_URL}/authors`);
+    setAuthors(response.data)
+  }
+
+  useEffect(() => {
+    getAuthors();
+  }, []);
 
   const handleSubmit = async (event) => {
     try {
@@ -33,10 +44,10 @@ const AddBook = () => {
 
         <div className="border border-[#9F4307] shadow-2xl rounded-xl h-5/6 w-2/5 ml-96 pb-10">
 
-          <form action="upload.php" method="post" enctype="multipart/form-data"   onSubmit={handleSubmit} className="flex flex-col text-center place-items-center backdrop-filter backdrop-blur-lg"  >
+          <form onSubmit={handleSubmit} className="flex flex-col text-center place-items-center backdrop-filter backdrop-blur-lg"  >
 
-            <input type="file" name="fileToUpload" id="fileToUpload" className="border border-[#9F4307] h-36 w-64 rounded-3xl mb-3 mt-2" required />
-            <input type="Submit" value="Upload Image" name="Submit" className="text-white"/>
+            <label className="text-white" > Enter Image Url</label>
+            <input type="url" name="" id="url" required className="border border-[#9F4307] w-64 rounded-3xl mb-3 p-1" />
 
 
             <label name="title" id="title" className="text-white">Title</label>
@@ -44,10 +55,10 @@ const AddBook = () => {
 
 
             <label name="Author" id="Author" className="text-white">Author</label>
-            <select name="author" id="authors" className="border border-[#9f4407] w-64 rounded-3xl mb-3 p-1" required>
-              <option value="#">-select-</option>
-              <option value="#">Coleen Hover</option>
-              <option value="#">Gabriel Bellany</option>
+            <select name="author" id="authors" className="border border-[#9f4407] w-64 rounded-3xl mb-3 p-1" required >
+             {authors.map((author) => {
+              return <option key={author._id} value={author._id}>{author.name}</option>
+             })}
             </select>
 
             <label name="genre" id="genre" className="text-white" >Genre</label>
@@ -60,9 +71,9 @@ const AddBook = () => {
             </select>
 
             <label name="year" id="year" className="text-white">Year</label>
-            <input type="date" className="border border-[#9F4307] w-64 rounded-3xl mb-3 p-1" required/>
+            <input type="date" className="border border-[#9F4307] w-64 rounded-3xl mb-3 p-1" required />
 
-            <label name="description" id="description"className="text-white" >Description</label>
+            <label name="description" id="description" className="text-white" >Description</label>
             <input type="text" className="border border-[#9F4307] h-28 w-64 rounded-3xl mb-3 p-1" required />
 
             <label name="content" id="content" className="text-white">Content</label>
