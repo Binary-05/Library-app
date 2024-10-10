@@ -30,6 +30,7 @@ const AddBook = () => {
         year: formData.get('year'),
         genre: formData.get('genre'),
         description: formData.get('description'),
+        content: formData.get('content'),
       })
     } catch (error) {
       console.log(error)
@@ -40,24 +41,24 @@ const AddBook = () => {
     <div className="bg-[url('./assets/images/books-5433432_1280.jpg')] bg-cover">
       <Navbar />
       <div className="mt-20 ">
-        <p className="font-bold italic text-3xl text-center ">Read with BookPal</p>
+        <p className="font-bold italic text-3xl text-center pb-5 ">Read with BookPal</p>
 
         <div className="border border-[#9F4307] shadow-2xl rounded-xl h-5/6 w-2/5 ml-96 pb-10">
 
-          <form onSubmit={handleSubmit} className="flex flex-col text-center place-items-center backdrop-filter backdrop-blur-lg"  >
+          <form onSubmit={handleSubmit} className="flex flex-col text-center place-items-center backdrop-filter backdrop-blur-lg pt-3"  >
 
             <label className="text-white" > Enter Image Url</label>
-            <input type="url" name="" id="url" required className="border border-[#9F4307] w-64 rounded-3xl mb-3 p-1" />
+            <input type="url" name="cover" id="url" required className="border border-[#9F4307] w-64 rounded-3xl mb-3 p-1" />
 
 
-            <label name="title" id="title" className="text-white">Title</label>
-            <input type="text" required className="border border-[#9F4307] w-64 rounded-3xl mb-3 p-1" />
+            <label id="title" className="text-white">Title</label>
+            <input name="title" type="text" required className="border border-[#9F4307] w-64 rounded-3xl mb-3 p-1" />
 
 
-            <label name="Author" id="Author" className="text-white">Author</label>
+            <label name="author" id="author" className="text-white">Author</label>
             <select name="author" id="authors" className="border border-[#9f4407] w-64 rounded-3xl mb-3 p-1" required >
              {authors.map((author) => {
-              return <option key={author._id} value={author._id}>{author.name}</option>
+              return <option key={author._id} value={author._id}>{author.author}</option>
              })}
             </select>
 
@@ -70,18 +71,18 @@ const AddBook = () => {
               <option value="#">History</option>
             </select>
 
-            <label name="year" id="year" className="text-white">Year</label>
-            <input type="date" className="border border-[#9F4307] w-64 rounded-3xl mb-3 p-1" required />
+            <label id="year" className="text-white">Year</label>
+            <input name="year" type="number" className="border border-[#9F4307] w-64 rounded-3xl mb-3 p-1" required />
 
-            <label name="description" id="description" className="text-white" >Description</label>
-            <input type="text" className="border border-[#9F4307] h-28 w-64 rounded-3xl mb-3 p-1" required />
+            <label id="description" className="text-white" >Description</label>
+            <input name="description" type="text" className="border border-[#9F4307] h-20 w-64 rounded-3xl mb-3 p-1" required />
 
-            <label name="content" id="content" className="text-white">Content</label>
-            <input type="text" className="border border-[#9F4307] h-28 w-64 rounded-3xl mb-3 p-1" />
+            <label id="content" className="text-white">Content</label>
+            <input name="content" type="text" className="border border-[#9F4307] h-28 w-64 rounded-3xl mb-3 p-1" />
 
 
 
-            <button className="bg-[#9F4307] text-white rounded-full w-24 h-10 ">Submit</button>
+            <button className="bg-[#9F4307] text-white rounded-full w-24 h-10 " type="submit">Submit</button>
           </form>
 
         </div>
