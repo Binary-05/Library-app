@@ -11,7 +11,7 @@ const Footer = () => {
     <section className=" bg-[#9F4307]  text-white">
       <div className="flex gap-28 p-20 m-7">
         <div className="flex flex-col w-[15%]">
-          <p className="pb-5">Logo <span className="text-[25px] font-bold">Bookle</span></p>
+          <p className="pb-5">Logo <span className="text-[25px] font-bold">BookPal</span></p>
           <p className="pb-5 font-semibold">Phasellus ultricies aliquam volutpat ullamcorper laoreet neque, a lacinia curabitur lacinia mollis</p>
           <div className="flex gap-1">
             <p className="border p-2"><FaFacebookF /></p>
