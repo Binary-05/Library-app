@@ -4,7 +4,7 @@ import Footer from '../../components/Footer';
 
 const EditBook = () => {
   return (
-    <div>
+    <div className="bg-[url('./assets/images/perfecto.jpg')] bg-cover">
         <Navbar />
         <div className='h-[80vh]'>
             <p className="font-bold italic text-3xl text-center pt-12">Edit Book</p>

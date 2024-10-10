@@ -4,12 +4,12 @@ import temple from '../../../../assets/images/temple.jpg'
 
 const K = {
          BOOKLISTS: [
-        { image: temple,
+        { cover: temple,
         title:"Reminders Of Him",
         author: "Colleen Hover"
         },
         
-        { image: temple,
+        { cover: temple,
         title:"Reminders Of Him",
         author: "Colleen Hover"
         },
