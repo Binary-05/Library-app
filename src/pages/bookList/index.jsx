@@ -45,7 +45,7 @@ const BookList = () => {
       {/* <Link to='/add-new'> Add Book</Link> */}
       {/* <button>Add Book</button> */}
       <Hero />
-      <p className="text-[2rem] flex font-serif font-bold pl-14 text-amber-900">BOOKS.</p>
+      <p className="text-[3rem] flex font-serif font-bold justify-center pb-7 text-amber-900">BOOKLIST</p>
       <p className="pl-14 underline text-[19px] font-serif text-amber-800">Personally Recommended</p>
       <div className="grid grid-cols-4 p-10 pt-2 gap-4">
 
