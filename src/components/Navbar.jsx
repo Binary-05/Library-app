@@ -26,10 +26,10 @@ const Navbar = () => {
                 <NavLink to='/' className='hover:underline hover:text-rose-600' >Home</NavLink>
                 <NavLink to='/add-new' className='hover:underline hover:text-rose-600' >Add Book</NavLink>
                 <NavLink to='/books/:id' className='hover:underline hover:text-rose-600 '>Book ID </NavLink>
-                <NavLink to='#' >Sign Up</NavLink>
+                {/* <NavLink to='#' >Sign Up</NavLink> */}
 
-                <div className="gap-2 flex-1">
-                <input type="search" placeholder="Search Bookle" className="h-9 w-2/5 border-none text-black p-1"/>
+                <div className="gap-3 flex-1 ">
+                <input type="search" placeholder="" className="h-9 w-2/5 border-none text-black rounded-2xl p-1"/>
                 <button>Search</button>
                 </div>
             </nav>
