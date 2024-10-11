@@ -45,7 +45,7 @@ const BookDetails = () => {
             {/* <div>Reviews</div> */}
             <div>{bookDetail.description}</div>
           </div>
-          <Link to="#">Read</Link>
+          <Link to="/readBook/:id">Read</Link>
         </div>
       </div>
       <Footer />
