@@ -9,7 +9,7 @@ import EditBook from './pages/editBook'
 
 
 function App() {
-  
+
   const router = createBrowserRouter([
     {
       path: '/',
@@ -24,14 +24,14 @@ function App() {
       element: <BookDetails />
     },
     {
-      path: '/edit-book',
+      path: '/edit-book/:id',
       element: <EditBook />
     }
   ])
 
 
-  return <RouterProvider router={router}/>;
-    
+  return <RouterProvider router={router} />;
+
 };
 
 export default App;

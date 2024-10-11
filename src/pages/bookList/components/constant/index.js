@@ -39,20 +39,20 @@ const K = {
         author: "Colleen Hover"
         },
         
-        { image: temple,
-        title:"Reminders Of Him",
-        author: "Colleen Hover"
-        },
+        // { image: temple,
+        // title:"Reminders Of Him",
+        // author: "Colleen Hover"
+        // },
         
-        { image: temple,
-        title:"Reminders Of Him",
-        author: "Colleen Hover"
-        },
+        // { image: temple,
+        // title:"Reminders Of Him",
+        // author: "Colleen Hover"
+        // },
         
-        { image: temple,
-        title:"Reminders Of Him",
-        author: "Colleen Hover"
-        },
+        // { image: temple,
+        // title:"Reminders Of Him",
+        // author: "Colleen Hover"
+        // },
         
 
     ]
