@@ -5,7 +5,7 @@ import BookList from './pages/bookList'
 import AddBook from './pages/addBook'
 import BookDetails from './pages/bookDetails'
 import EditBook from './pages/editBook'
-
+import ReadBook from './pages/readBook'
 
 
 function App() {
@@ -26,6 +26,10 @@ function App() {
     {
       path: '/edit-book/:id',
       element: <EditBook />
+    },
+    {
+      path: '/readBook/:id',
+      element: <ReadBook />
     }
   ])
 
